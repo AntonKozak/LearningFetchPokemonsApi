@@ -1,0 +1,101 @@
+
+
+header {
+    background: #022890dd;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+nav{
+    padding: 0 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li.pokemon-image {
+    font-size: 1.6rem;
+}
+
+nav ul li.toggle{
+    order: 1;
+}
+
+nav ul li.menu-li-navigation{
+    display: none;
+    width: 100%;
+    text-align: center;
+    order: 2;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.6rem;
+    color: #fff;
+}
+
+nav ul li a:hover{
+    color: rgb(209, 14, 14);
+}
+
+nav ul:has(li #menu-open-btn:checked) .menu-li-navigation {
+    display: block;
+}
+nav ul li #menu-open-btn{
+    display: none;
+}
+
+nav ul li .menu-icon {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+nav ul li .menu-icon .menu-span-icon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background-color 0.2s  ease-out;
+}
+
+nav ul li .menu-icon .menu-span-icon::before ,
+nav ul li .menu-icon .menu-span-icon::after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2s  ease-out;
+}
+
+nav ul li .menu-icon .menu-span-icon::before{
+    top: -5px;
+}
+
+nav ul li .menu-icon .menu-span-icon::after{
+    top: 5px;
+}
+
+/* add animation */
+
+nav ul li #menu-open-btn:checked ~ .menu-icon .menu-span-icon{
+    background: transparent;
+}
+
+nav ul li #menu-open-btn:checked ~ .menu-icon .menu-span-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+nav ul li #menu-open-btn:checked ~ .menu-icon .menu-span-icon::after {
+    transform: rotate(45deg);
+    top: 0;
+}

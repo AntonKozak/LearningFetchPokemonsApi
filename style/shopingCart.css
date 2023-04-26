@@ -1,0 +1,49 @@
+.modal-btn {
+  height: 3rem;
+  width: 5rem;
+  background: greenyellow;
+  font-size: larger;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 7rem 1rem 0 0;
+}
+
+.section-shoping-cart {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.shoping-cart-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.close-shoping-modal-window {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-shoping-modal-window:hover,
+.close-shoping-modal-window:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
