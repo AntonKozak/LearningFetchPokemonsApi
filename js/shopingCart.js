@@ -1,10 +1,13 @@
+//get li from navbar
+const shopingItems = document.querySelector("#containerShopingList");
+
 //Shopping Cart Btn
 const modalBtn = document.createElement("button");
 modalBtn.classList.add("modal-btn");
-modalBtn.textContent = 'Shoping List';
+modalBtn.textContent = "Shoping List";
 
 const PokemonsCartBtn = () => {
-  main.appendChild(modalBtn);
+  shopingItems.appendChild(modalBtn);
 };
 PokemonsCartBtn();
 
@@ -23,7 +26,7 @@ shopingClose.classList.add("close-shoping-modal-window");
 shopingClose.innerHTML = "&times;";
 
 const someText = document.createElement("p");
-someText.textContent = `Some text Some text Some text Some text `;
+someText.textContent = `Pokemons which you have choose`;
 
 const PokemonsShopingCart = () => {
   shopingCart.appendChild(contForShopingCart);
@@ -34,22 +37,22 @@ const PokemonsShopingCart = () => {
 };
 PokemonsShopingCart();
 
-function buttonOnClick () {
+function buttonOnClick() {
   shopingCart.style.display = "block";
-};
+}
 
-function spanCloseShopingCart () {
+function spanCloseShopingCart() {
   shopingCart.style.display = "none";
-};
+}
 
-function closeCart (e) {
-  if(e.target == shopingCart){
-    shopingCart.style.display = 'none';
+function closeCart(e) {
+  if (e.target == shopingCart) {
+    shopingCart.style.display = "none";
   }
 }
 
 const test = document.body;
 
-modalBtn.addEventListener('click', buttonOnClick);
-shopingClose.addEventListener('click', spanCloseShopingCart);
-window.addEventListener('click', closeCart);
+modalBtn.addEventListener("click", buttonOnClick);
+shopingClose.addEventListener("click", spanCloseShopingCart);
+window.addEventListener("click", closeCart);

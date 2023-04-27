@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 /* Style the container element for each Pokemon */
@@ -41,15 +42,22 @@
   text-transform: capitalize;
 }
 
-/* Style next-previous-btn */
-.btnContainer{
-  position: sticky;
+
+
+
+
+/* Footer */
+
+footer {
+  background-color:  #022890dd;
   text-align: center;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
   bottom: 0;
 }
-
-.previous-next-btn {
-  height: 4rem;
-  width: 6rem;
-  margin: 3rem;
+footer p {
+  color: #fff;
+  font-size: 1rem;
+  z-index: 1;
 }

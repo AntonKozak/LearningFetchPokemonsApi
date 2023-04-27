@@ -1,0 +1,12 @@
+/* Style next-previous-btn */
+.btnContainer{
+    /* position: sticky; */
+    text-align: center;
+    bottom: 0;
+  }
+  
+  .previous-next-btn {
+    height: 4rem;
+    width: 6rem;
+    margin: 3rem;
+  }

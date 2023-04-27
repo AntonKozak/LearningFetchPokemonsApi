@@ -14,9 +14,12 @@ nav{
 nav ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     list-style: none;
+}
+nav ul li.logo{
+    order: 2;
 }
 
 nav ul li.pokemon-image {
@@ -31,7 +34,7 @@ nav ul li.menu-li-navigation{
     display: none;
     width: 100%;
     text-align: center;
-    order: 2;
+    order: 3;
 }
 
 nav ul li a {
@@ -47,14 +50,25 @@ nav ul li a:hover{
 nav ul:has(li #menu-open-btn:checked) .menu-li-navigation {
     display: block;
 }
+
+
 nav ul li #menu-open-btn{
     display: none;
 }
 
 nav ul li .menu-icon {
+    display: flex;
+    align-items: center;
     padding: 1rem;
     cursor: pointer;
 }
+
+nav ul li .menu-span-text{
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    color: #fff;
+}
+
 
 nav ul li .menu-icon .menu-span-icon {
     background: #fff;
@@ -63,6 +77,12 @@ nav ul li .menu-icon .menu-span-icon {
     width: 18px;
     position: relative;
     transition: background-color 0.2s  ease-out;
+}
+
+nav ul li .logo {
+    display: block;
+    position: relative;
+    
 }
 
 nav ul li .menu-icon .menu-span-icon::before ,
