@@ -11,6 +11,19 @@ const PokemonsCartBtn = () => {
 };
 PokemonsCartBtn();
 
+// Btn Local Storage
+const deleteLocalStorageAll = document.createElement("button");
+deleteLocalStorageAll.classList.add("deleteAllStorage");
+deleteLocalStorageAll.classList.add("fa-solid");
+deleteLocalStorageAll.classList.add("fa-trash");
+deleteLocalStorageAll.textContent = "  Delete all list of pokemons";
+deleteLocalStorageAll.addEventListener("click", () => {
+  localStorage.clear(); 
+  location.reload();
+  });
+
+
+
 //Shopping Cart body with Pokemons to buy
 const shopingCart = document.createElement("section");
 shopingCart.classList.add("section-shoping-cart");
@@ -30,6 +43,7 @@ someText.textContent = `Pokemons which you have choose`;
 
 const PokemonsShopingCart = () => {
   shopingCart.appendChild(contForShopingCart);
+  contForShopingCart.appendChild(deleteLocalStorageAll);
   contForShopingCart.appendChild(shopingClose);
   contForShopingCart.appendChild(someText);
   contForShopingCart.appendChild(items);
@@ -48,11 +62,15 @@ function spanCloseShopingCart() {
 function closeCart(e) {
   if (e.target == shopingCart) {
     shopingCart.style.display = "none";
+    location.reload();
   }
 }
 
 const test = document.body;
 
 modalBtn.addEventListener("click", buttonOnClick);
-shopingClose.addEventListener("click", spanCloseShopingCart);
+shopingClose.addEventListener("click", () => {
+  spanCloseShopingCart();
+  location.reload();}
+  );
 window.addEventListener("click", closeCart);

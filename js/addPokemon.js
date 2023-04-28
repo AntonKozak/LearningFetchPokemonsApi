@@ -26,8 +26,6 @@
 //   ).innerText = `Shoping List (${items.children.length})`;
 // };
 
-
-
 // try to load local storage
 
 const getPokemonsFromLocalStorage = () => {
@@ -49,15 +47,30 @@ const getPokemonsFromLocalStorage = () => {
       image.setAttribute("src", `${pokemon.image}`);
       image.setAttribute("alt", `${pokemon.name}`);
 
+      // Btn delete pokemon from list
+      const deletePokemonFromList = document.createElement("button");
+      deletePokemonFromList.setAttribute("id", "deletePokemon");
+      deletePokemonFromList.classList.add("fa-solid");
+      deletePokemonFromList.classList.add("fa-trash");
+
+      deletePokemonFromList.addEventListener("click", () => {
+        removeFromLocalStorage(pokemon);
+        console.log(pokemon);
+        container.remove();
+      });
+
       container.appendChild(image);
       container.appendChild(pokeName);
       container.appendChild(pokePrice);
+      container.appendChild(deletePokemonFromList);
       items.appendChild(container);
       document.querySelector(
         ".modal-btn"
-    //   ).innerText = `Shoping List (${items.children.length})`;
+        //   ).innerText = `Shoping List (${items.children.length})`;
       ).innerText = `Shoping List (${cartItems.length})`;
+
+      // console.log(pokemon);
     });
   }
-  console.log(pokemonsStorage);
+
 };

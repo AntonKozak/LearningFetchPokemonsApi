@@ -54,3 +54,12 @@ section div p {
   text-align: center;
   padding-bottom: 1rem;
 }
+
+.deleteAllStorage {
+  font-size: 1.3rem;
+  padding: 2rem;
+}
+
+.fa-solid {
+  font-size: 1.4rem;
+}

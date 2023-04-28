@@ -36,6 +36,7 @@ const elementPokemon = (pokemon) => {
     // addToCart(pokemon);
     addToStorage(pokemon);
     getPokemonsFromLocalStorage();
+  
   };
 
   const image = document.createElement("img");
